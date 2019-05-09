@@ -1,0 +1,4 @@
+name = "Utils"
+uuid = "e0cee028-7246-11e9-1579-6d892a2f92eb"
+authors = ["Jon Alm Eriksen <jon.alm.eriksen@protonmail.com>"]
+version = "0.1.0"
