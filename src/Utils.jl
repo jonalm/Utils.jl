@@ -1,18 +1,14 @@
 module Utils
 
-repeatf(n, f, x) = n > 1 ? f(repeatf(n-1, f, x)) : f(x)
-
-function coarse(matrix)
-    out   = matrix[1:2:end, 1:2:end]
-    out .+= matrix[1:2:end, 2:2:end]
-    out .+= matrix[2:2:end, 1:2:end]
-    out .+= matrix[2:2:end, 2:2:end]
-    out ./ 4
-end
+using FFTW
+using GeometryTypes: Triangle
 
 
-export
-    coarse,
-    repeatf
+include("misc.jl")
+include("iterators.jl")
+include("interpft.jl")
+include("fourier.jl")
+include("neighbormap.jl")
+include("meshutils.jl")
 
 end # module
