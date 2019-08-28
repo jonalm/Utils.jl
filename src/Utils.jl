@@ -6,7 +6,6 @@ using GeometryTypes: Triangle
 
 include("misc.jl")
 include("iterators.jl")
-include("interpft.jl")
 include("fourier.jl")
 include("neighbormap.jl")
 include("meshutils.jl")

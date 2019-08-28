@@ -1,5 +1,6 @@
 
-using GeometryTypes: Triangle
+
+export colors_face2vertex_based
 
 function colors_face2vertex_based(vertices, faces, colors)
     new_vertices = similar(vertices, 0)

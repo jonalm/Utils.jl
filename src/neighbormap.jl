@@ -1,4 +1,6 @@
 
+export NeighborMap
+
 struct NeighborMap{R, Dim, D}
     lookup::Dict{NTuple{Dim,Int}, Vector{R}}
     delta::D
@@ -26,8 +28,6 @@ function Base.append!(nm::NeighborMap, iter)
 end
 
 Base.setindex!(nm::NeighborMap, pos, ref) = push!(nm, (pos, ref))
-
-function _getindex(nm::NeighborMap, key) end
 
 function Base.getindex(nm::NeighborMap, pos)
     nhood = Iterators.product((_neighbors(i) for i in _pos2ind(nm, pos))...)
